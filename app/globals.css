@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root{--bg:#F5F6F8;--surface:#fff;--ink:#12151C;--muted:#5B6270;--line:#E3E6EC;--accent:#2F5BFF;--accent-ink:#fff;--premium:#C98A0B;--ok:#15935B;--radius:14px}
+:root[data-theme=dark]{--bg:#0C0E13;--surface:#141821;--ink:#EEF0F5;--muted:#9AA1B2;--line:#232A38;--accent:#6E8CFF;--accent-ink:#0C0E13;--premium:#E7B34A}
+body{background:var(--bg);color:var(--ink);font-family:'Figtree',system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;letter-spacing:-.02em}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.page-enter{animation:rise .25s ease-out}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@keyframes pop{0%{transform:scale(.4);opacity:0}60%{transform:scale(1.15);opacity:1}100%{transform:scale(1)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.pop{animation:pop .5s cubic-bezier(.2,.9,.3,1.2)}
+.fade{animation:fade .2s ease-out}
+@keyframes pop{0%{transform:scale(.4);opacity:0}60%{transform:scale(1.15);opacity:1}100%{transform:scale(1)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.pop{animation:pop .5s cubic-bezier(.2,.9,.3,1.2)}
+.fade{animation:fade .2s ease-out}
